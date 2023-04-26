@@ -3,61 +3,77 @@
 <head>
 	<title>Home Page</title>
 	<style>
+		/* 设置上下两部分的样式 */
 		body {
 			margin: 0;
 			padding: 0;
-            font-family: Arial, sans-serif;
-		}
-		header, footer {
-			height: 15%;
-			background-color: lightgreen;
-			text-align: center;
-			line-height: 100%;
-		}
-		#content {
+			background-color: #eaf6ef;
 			display: flex;
-			flex-direction: row;
-			height: 85%;
+			flex-direction: column;
+			height: 100vh;
 		}
-		#left {
-			width: 300px;
-                        margin-right: 20px;
-			background-color: lightblue;
+		.header {
+			background-color: #4caf50;
+			flex: 1.5;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			font-size: 24px;
+		}
+		.main {
+			flex: 8.5;
+			display: flex;
+		}
+		.left {
+			flex: 3;
 			padding: 20px;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
+			box-sizing: border-box;
 		}
-		#right {
-			flex-grow: 1;
+		.right {
+			flex: 7;
 			padding: 20px;
+			box-sizing: border-box;
+			background-color: white;
 		}
-		h1 {
+		/* 设置左侧部分的样式 */
+		img.profile-pic {
+			display: block;
+			margin: 0 auto;
+			width: 200px;
+			height: 200px;
+			object-fit: cover;
+			border-radius: 50%;
+		}
+		.contact-info {
+			margin-top: 30px;
+			line-height: 1.5em;
+		}
+		h2 {
 			margin-top: 0;
+			font-size: 28px;
 		}
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-        }
-        h2 {
-            margin-top: 0;
-        }
-        p {
-            margin: 5px;
-        }
+		p {
+			margin: 10px 0;
+			font-size: 20px;
+			color: #777;
+		}
 	</style>
 </head>
 <body>
-	<div id="content">
-		<div id="left">
-			<img class = "ex1" src="zjz.jpg" alt="证件照" width ="150" height = "200">
-			<h2>王翠环</h2>
-			<p>个人邮箱：yi_wei0309@163.com</p>
-		        <p>籍贯：山东德州</p>
+	<div class="header">
+		个人主页
+	</div>
+		<div class="main">
+			<div class="left">
+			<img class="profile-pic" src="zjz.jpg" width ="150" height = "200">
+			<div class="contact-info">
+			  <h2>王翠环</h2>
+			  <p>个人邮箱：yi_wei0309@163.com</p>
+		          <p>籍贯：山东德州</p>
+			</div>
 		</div>
-		<div id="right">
+		<div class="right">
 			<h2>&ensp;&ensp;&ensp;教育背景</h2>
 			<ul>
 				&ensp;&ensp;&ensp;<li>2019.09.01-2023.06.01，学士，河南大学，植物科学与技术</li>
